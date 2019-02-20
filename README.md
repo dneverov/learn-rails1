@@ -27,7 +27,7 @@ For a bash shell, using the Gmail example, edit the **~/.bashrc** file and add:
 `export DOMAIN_NAME="???"`
 `export MAILCHIMP_API_KEY="???"`
 `export MAILCHIMP_LIST_ID="???"`
-`export OWNER_EMAIL="denis.neverov@gmail.com"`
+`export OWNER_EMAIL="d**.n**@gmail.com"`
 `export SECRET_KEY_BASE="???"`
 
 e.g. `gedit ~/.bashrc`
@@ -42,7 +42,7 @@ e.g. `gedit ~/.bashrc`
 
 http://localhost:3000/ -- it works
 
-Subscribed as _devlanev@yandex.ru_
+Subscribed as _dev****@yandex.ru_
 
 See at [MailChimp Lists](https://us20.admin.mailchimp.com/lists/members?id=10843#p:1-s:10-so:null).
 
@@ -51,8 +51,15 @@ So, __it works!__
 
 What's next? -- ## Deploy to Heroku
 
+`$ heroku config:add SENDGRID_USERNAME='example' SENDGRID_PASSWORD='secret'
+$ heroku config:add MAILCHIMP_API_KEY='my-key' MAILCHIMP_LIST_ID='mylistid'
+$ heroku config:add OWNER_EMAIL='me@example.com' DOMAIN_NAME='myapp.herokuapp.com'`
 
+Complete Heroku deployment with:
 
+`$ git push heroku master`
+
+__Done__
 
 
 
@@ -64,13 +71,6 @@ This application was generated with the [rails_apps_composer](https://github.com
 provided by the [RailsApps Project](http://railsapps.github.io/).
 
 Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
------------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
 
 If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
 and include the diagnostics.
@@ -84,24 +84,3 @@ This application requires:
 - Rails 5.2.2
 
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
-
-Credits
--------
-
-License
--------
